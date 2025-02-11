@@ -1,0 +1,30 @@
+Configs: {
+	CustomMinionSlotsConfig: {
+		FasterSummoning: {
+			Tooltip: Enable faster summoning by reducing the time between summoner weapon uses.
+			Label: Faster Summoning
+		}
+
+		UIPositionY: {
+			Tooltip: Set the vertical position of the Minion Slot UI. Enter a value in pixels.
+			Label: UI Position Y
+		}
+
+		UIPositionX: {
+			Tooltip: Set the horizontal position of the Minion Slot UI. Enter a value in pixels.
+			Label: UI Position X
+		}
+
+		ShowMinionUI: {
+			Tooltip: Enable or disable the Minion Slot UI display.
+			Label: Show Minion Slot UI
+		}
+
+		MinionSlotLimit: {
+			Tooltip: Set the limit for the number of minions.
+			Label: Minion Slot Limit
+		}
+
+		DisplayName: Custom Minion Slots Config
+	}
+}
