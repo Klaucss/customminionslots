@@ -3,4 +3,3 @@ version = 1.0.1
 displayName = Custom Minion Slots
 description = Allows you to set a custom minion slot limit.
 homepage = https://github.com/klaucss
-icon = icon.png
