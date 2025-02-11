@@ -1,0 +1,39 @@
+Custom Minion Slots Mod
+=======================
+
+Features:
+- **Customizable Minion Slot Limit**:
+  - Set the maximum number of minions your character can summon, from 1 to 100.
+  - Configurable in the Mod Config menu, with real-time updates in-game.
+
+- **Dynamic Minion Slot UI**:
+  - Displays the number of currently used and available minion slots.
+  - Fully draggable UI element.
+  - Position can be saved and will persist between sessions.
+  - Configurable visibility to toggle the UI on or off.
+
+- **Draggable Minion Slot UI**:
+  - Smooth drag-and-drop functionality for easy repositioning.
+  - The UI follows your mouse precisely, even during fast movements.
+  - Automatically saves the position after dragging.
+
+- **Optional Faster Summoning**:
+  - Enable faster summoning for summoner weapons by reducing the time between uses.
+  - This feature is **off by default** and can be toggled in the Mod Config menu.
+  - Ideal for summoner-focused players looking for efficiency.
+
+- **In-Game Config Updates**:
+  - Changes to the minion slot limit or UI visibility take effect immediately.
+  - No need to reload the world or rejoin the server.
+
+- **Important Note**:
+  - Terraria has a **projectile limit** (usually 1000), which applies to minions, pets, and other projectiles.
+  - Exceeding this limit can result in other projectiles disappearing or unexpected behavior.
+  - Be mindful of this limit when setting a high minion slot count.
+
+- **Persistent Settings**:
+  - The mod remembers your preferred minion slot limit and UI position across sessions.
+
+Use this mod to take full control of your summoner playstyle, whether you're aiming for efficiency or experimenting with high minion limits!
+
+Enjoy a seamless, customizable summoner experience!
