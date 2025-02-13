@@ -1,10 +1,11 @@
+using Microsoft.Xna.Framework; // For Color
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
 namespace CustomMinionSlots
 {
-    public class CustomMinionSlotPlayer : ModPlayer
+    public class CustomMinionSlotsPlayer : ModPlayer
     {
         public int SavedMinionSlotLimit = 5; // Default value
 
@@ -23,20 +24,17 @@ namespace CustomMinionSlots
 
         public override void OnEnterWorld()
         {
-            // Apply minion slot settings when the player enters the world
             ApplyConfigMinionSlotLimit();
         }
 
         public override void ResetEffects()
         {
-            // Ensure the player always has the correct minion slots
             Player.maxMinions = SavedMinionSlotLimit;
         }
 
         public void ApplyConfigMinionSlotLimit()
         {
-            // Get the latest minion slot limit from the config
-            var config = ModContent.GetInstance<CustomMinionSlotsConfig>();
+            var config = ModContent.GetInstance<Config>();
             if (config != null)
             {
                 SavedMinionSlotLimit = config.MinionSlotLimit;
@@ -46,19 +44,32 @@ namespace CustomMinionSlots
 
         public override void PostUpdate()
         {
-            var config = ModContent.GetInstance<CustomMinionSlotsConfig>();
+            var config = ModContent.GetInstance<Config>();
             if (config.FasterSummoning)
             {
                 foreach (Item item in Player.inventory)
                 {
-                    // Check if the item is a summoner weapon
                     if (item.DamageType == DamageClass.Summon && item.useTime > 1)
                     {
-                        item.useTime = 5; // Reduce use time for faster summoning
-                        item.useAnimation = 5; // Sync the animation speed with the use time
+                        item.useTime = 5;
+                        item.useAnimation = 5;
                     }
                 }
             }
+        }
+
+        public Color GetBiomeBasedColor()
+        {
+            if (Player.ZoneCorrupt) return Color.Purple;
+            if (Player.ZoneCrimson) return Color.Red;
+            if (Player.ZoneSnow) return Color.LightBlue;
+            if (Player.ZoneJungle) return Color.Green;
+            if (Player.ZoneDesert) return Color.SandyBrown;
+            if (Player.ZoneBeach) return Color.Cyan;
+            if (Player.ZoneUnderworldHeight) return Color.Orange;
+            if (Player.ZoneSkyHeight) return Color.LightYellow;
+
+            return Color.White;
         }
     }
 }

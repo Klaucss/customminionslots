@@ -2,7 +2,7 @@ using Terraria.ModLoader;
 
 namespace CustomMinionSlots
 {
-    public class CustomMinionSlotsMod : Mod
+    public class CustomMinionSlots : Mod
     {
         public override void Load()
         {

@@ -27,4 +27,43 @@ Configs: {
 
 		DisplayName: Custom Minion Slots Config
 	}
+
+	Config: {
+		UIPositionX: {
+			Tooltip: Set the horizontal position of the Minion Slot UI. Enter a value in pixels.
+			Label: UI Position X
+		}
+
+		ShowMinionUI: {
+			Tooltip: Enable or disable the Minion Slot UI display.
+			Label: Show Minion Slot UI
+		}
+
+		MinionSlotLimit: {
+			Tooltip: Set the limit for the number of minions.
+			Label: Minion Slot Limit
+		}
+
+		DisplayName: Config
+
+		UIPositionY: {
+			Label: UI Position Y
+			Tooltip: Set the vertical position of the Minion Slot UI. Enter a value in pixels.
+		}
+
+		FasterSummoning: {
+			Label: Faster Summoning
+			Tooltip: Enable faster summoning by reducing the time between summoner weapon uses.
+		}
+
+		MinionUIBaseColor: {
+			Label: Custom Minion Slots UI Color
+			Tooltip: Set the color of the Minion Slots UI.
+		}
+
+		EnableBiomeBasedColor: {
+			Label: Enable Biome-Based Color
+			Tooltip: Change the color of the Minion Slots UI based on the player's current biome.
+		}
+	}
 }

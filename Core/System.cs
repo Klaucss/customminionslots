@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace CustomMinionSlots
 {
-    public class CustomMinionSlotsSystem : ModSystem
+    public class System : ModSystem
     {
         private static bool updateRequested = false;
 
@@ -19,7 +19,7 @@ namespace CustomMinionSlots
                     Player player = Main.player[i];
                     if (player != null && player.active) // Ensure the player is active
                     {
-                        player.GetModPlayer<CustomMinionSlotPlayer>().ApplyConfigMinionSlotLimit();
+                        player.GetModPlayer<CustomMinionSlotsPlayer>().ApplyConfigMinionSlotLimit();
                     }
                 }
             }
