@@ -65,5 +65,27 @@ Configs: {
 			Label: Enable Biome-Based Color
 			Tooltip: Change the color of the Minion Slots UI based on the player's current biome.
 		}
+
+		EnableUIDragging: {
+			Label: Enable UI Dragging
+			Tooltip: Enable or disable the dragging functionality of the UI.
+		}
+
+		UIScale: {
+			Label: UI Scale
+			Tooltip: Set the scale of the Minion Slot UI.
+		}
+
+		ResetUIScaleFlag: {
+			Label: Reset UI Scale
+			Tooltip: Set this to true to reset the UI scale to its default value.
+		}
+	}
+
+	Headers: {
+		GeneralSettings: General Settings
+		UIPosition: UI Position
+		AppearanceSettings: Appearance Settings
+		GameplayEnhancements: Gameplay Enhancements
 	}
 }

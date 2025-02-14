@@ -1,0 +1,91 @@
+Configs: {
+	CustomMinionSlotsConfig: {
+		FasterSummoning: {
+			Tooltip: 通过减少召唤武器使用之间的时间来启用更快的召唤。
+			Label: 更快的召唤
+		}
+
+		UIPositionY: {
+			Tooltip: 设置召唤栏用户界面的垂直位置。请输入像素值。
+			Label: UI 位置 Y
+		}
+
+		UIPositionX: {
+			Tooltip: 设置召唤栏用户界面的水平位置。请输入像素值。
+			Label: UI 位置 X
+		}
+
+		ShowMinionUI: {
+			Tooltip: 启用或禁用召唤栏用户界面的显示。
+			Label: 显示召唤栏 UI
+		}
+
+		MinionSlotLimit: {
+			Tooltip: 设置召唤栏的最大召唤物数量。
+			Label: 召唤栏数量限制
+		}
+
+		DisplayName: 自定义召唤栏配置
+	}
+
+	Config: {
+		UIPositionX: {
+			Tooltip: 设置召唤栏用户界面的水平位置。请输入像素值。
+			Label: UI 位置 X
+		}
+
+		ShowMinionUI: {
+			Tooltip: 启用或禁用召唤栏用户界面的显示。
+			Label: 显示召唤栏 UI
+		}
+
+		MinionSlotLimit: {
+			Tooltip: 设置召唤栏的最大召唤物数量。
+			Label: 召唤栏数量限制
+		}
+
+		DisplayName: 配置
+
+		UIPositionY: {
+			Label: UI 位置 Y
+			Tooltip: 设置召唤栏用户界面的垂直位置。请输入像素值。
+		}
+
+		FasterSummoning: {
+			Label: 更快的召唤
+			Tooltip: 通过减少召唤武器使用之间的时间来启用更快的召唤。
+		}
+
+		MinionUIBaseColor: {
+			Label: 召唤栏 UI 颜色
+			Tooltip: 设置召唤栏用户界面的颜色。
+		}
+
+		EnableBiomeBasedColor: {
+			Label: 启用环境颜色
+			Tooltip: 根据玩家当前所在的环境改变召唤栏用户界面的颜色。
+		}
+
+		EnableUIDragging: {
+			Label: 启用界面拖动
+			Tooltip: 启用或禁用用户界面的拖动功能。
+		}
+
+		UIScale: {
+			Label: UI 缩放比例
+			Tooltip: 设置召唤栏用户界面的缩放比例。
+		}
+
+		ResetUIScaleFlag: {
+			Label: 重置 UI 缩放
+			Tooltip: 将此项设置为 true 以重置用户界面的缩放比例为默认值。
+		}
+	}
+
+	Headers: {
+		GeneralSettings: 常规设置
+		UIPosition: 界面位置
+		AppearanceSettings: 外观设置
+		GameplayEnhancements: 游戏增强功能
+	}
+}

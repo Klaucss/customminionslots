@@ -1,0 +1,91 @@
+Configs: {
+	CustomMinionSlotsConfig: {
+		FasterSummoning: {
+			Tooltip: Habilita la invocación más rápida reduciendo el tiempo entre usos de armas de invocación.
+			Label: Invocación Rápida
+		}
+
+		UIPositionY: {
+			Tooltip: Establece la posición vertical de la interfaz de Minion Slot. Ingresa un valor en píxeles.
+			Label: Posición Y de la UI
+		}
+
+		UIPositionX: {
+			Tooltip: Establece la posición horizontal de la interfaz de Minion Slot. Ingresa un valor en píxeles.
+			Label: Posición X de la UI
+		}
+
+		ShowMinionUI: {
+			Tooltip: Habilita o deshabilita la visualización de la interfaz de Minion Slot.
+			Label: Mostrar UI de Minion Slot
+		}
+
+		MinionSlotLimit: {
+			Tooltip: Establece el límite para el número de minions.
+			Label: Límite de Minion Slot
+		}
+
+		DisplayName: Configuración de Minion Slots Personalizada
+	}
+
+	Config: {
+		UIPositionX: {
+			Tooltip: Establece la posición horizontal de la interfaz de Minion Slot. Ingresa un valor en píxeles.
+			Label: Posición X de la UI
+		}
+
+		ShowMinionUI: {
+			Tooltip: Habilita o deshabilita la visualización de la interfaz de Minion Slot.
+			Label: Mostrar UI de Minion Slot
+		}
+
+		MinionSlotLimit: {
+			Tooltip: Establece el límite para el número de minions.
+			Label: Límite de Minion Slot
+		}
+
+		DisplayName: Configuración
+
+		UIPositionY: {
+			Label: Posición Y de la UI
+			Tooltip: Establece la posición vertical de la interfaz de Minion Slot. Ingresa un valor en píxeles.
+		}
+
+		FasterSummoning: {
+			Label: Invocación Rápida
+			Tooltip: Habilita la invocación más rápida reduciendo el tiempo entre usos de armas de invocación.
+		}
+
+		MinionUIBaseColor: {
+			Label: Color de la UI de Minion Slots
+			Tooltip: Establece el color de la interfaz de Minion Slots.
+		}
+
+		EnableBiomeBasedColor: {
+			Label: Activar Color Basado en el Bioma
+			Tooltip: Cambia el color de la interfaz de Minion Slots según el bioma actual del jugador.
+		}
+
+		EnableUIDragging: {
+			Label: Activar Arrastre de la UI
+			Tooltip: Habilita o deshabilita la función de arrastrar de la interfaz.
+		}
+
+		UIScale: {
+			Label: Escala de la UI
+			Tooltip: Establece la escala de la interfaz de Minion Slot.
+		}
+
+		ResetUIScaleFlag: {
+			Label: Restablecer Escala de la UI
+			Tooltip: Establece esto en true para restablecer la escala de la interfaz al valor predeterminado.
+		}
+	}
+
+	Headers: {
+		GeneralSettings: Configuración General
+		UIPosition: Posición de la UI
+		AppearanceSettings: Configuración de Apariencia
+		GameplayEnhancements: Mejoras de Juego
+	}
+}

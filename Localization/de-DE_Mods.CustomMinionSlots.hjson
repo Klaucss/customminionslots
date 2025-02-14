@@ -1,0 +1,91 @@
+Configs: {
+	CustomMinionSlotsConfig: {
+		FasterSummoning: {
+			Tooltip: Aktiviert schnelleres Beschwören, indem die Zeit zwischen Beschwörerwaffenangriffen verkürzt wird.
+			Label: Schnelleres Beschwören
+		}
+
+		UIPositionY: {
+			Tooltip: Legt die vertikale Position der Minion Slot UI fest. Gib einen Wert in Pixeln ein.
+			Label: UI-Position Y
+		}
+
+		UIPositionX: {
+			Tooltip: Legt die horizontale Position der Minion Slot UI fest. Gib einen Wert in Pixeln ein.
+			Label: UI-Position X
+		}
+
+		ShowMinionUI: {
+			Tooltip: Aktiviert oder deaktiviert die Anzeige der Minion Slot UI.
+			Label: Minion Slot UI anzeigen
+		}
+
+		MinionSlotLimit: {
+			Tooltip: Legt das Limit für die Anzahl der Minions fest.
+			Label: Minion Slot Limit
+		}
+
+		DisplayName: Benutzerdefinierte Minion Slots Konfiguration
+	}
+
+	Config: {
+		UIPositionX: {
+			Tooltip: Legt die horizontale Position der Minion Slot UI fest. Gib einen Wert in Pixeln ein.
+			Label: UI-Position X
+		}
+
+		ShowMinionUI: {
+			Tooltip: Aktiviert oder deaktiviert die Anzeige der Minion Slot UI.
+			Label: Minion Slot UI anzeigen
+		}
+
+		MinionSlotLimit: {
+			Tooltip: Legt das Limit für die Anzahl der Minions fest.
+			Label: Minion Slot Limit
+		}
+
+		DisplayName: Konfiguration
+
+		UIPositionY: {
+			Label: UI-Position Y
+			Tooltip: Legt die vertikale Position der Minion Slot UI fest. Gib einen Wert in Pixeln ein.
+		}
+
+		FasterSummoning: {
+			Label: Schnelleres Beschwören
+			Tooltip: Aktiviert schnelleres Beschwören, indem die Zeit zwischen Beschwörerwaffenangriffen verkürzt wird.
+		}
+
+		MinionUIBaseColor: {
+			Label: Minion Slots UI-Farbe
+			Tooltip: Legt die Farbe der Minion Slots UI fest.
+		}
+
+		EnableBiomeBasedColor: {
+			Label: Biombasierte Farbe aktivieren
+			Tooltip: Ändert die Farbe der Minion Slots UI basierend auf dem aktuellen Biom des Spielers.
+		}
+
+		EnableUIDragging: {
+			Label: UI-Ziehen aktivieren
+			Tooltip: Aktiviert oder deaktiviert die Ziehfunktion der UI.
+		}
+
+		UIScale: {
+			Label: UI-Skalierung
+			Tooltip: Legt die Skalierung der Minion Slot UI fest.
+		}
+
+		ResetUIScaleFlag: {
+			Label: UI-Skalierung zurücksetzen
+			Tooltip: Setze dies auf true, um die UI-Skalierung auf den Standardwert zurückzusetzen.
+		}
+	}
+
+	Headers: {
+		GeneralSettings: Allgemeine Einstellungen
+		UIPosition: UI Position
+		AppearanceSettings: Erscheinungsbild-Einstellungen
+		GameplayEnhancements: Spielverbesserungen
+	}
+}
