@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 using Terraria.UI;
+using System;
 
 namespace CustomMinionSlots.UI
 {
@@ -22,11 +23,10 @@ namespace CustomMinionSlots.UI
         public DraggableText(string text, Color textColor, DynamicSpriteFont font)
         {
             this.text = text;
-            this.TextColor = textColor;
-            this.Font = font;
-            this.DragEnabled = true;
-            Width.Set(200f, 0f);
-            Height.Set(50f, 0f);
+            TextColor = textColor;
+            Font = font;
+            DragEnabled = true;
+            UpdateSize();
         }
 
         public void SetPosition(float x, float y)
@@ -39,57 +39,87 @@ namespace CustomMinionSlots.UI
         public void SetText(string newText)
         {
             text = newText;
+            UpdateSize();
         }
 
         public void SetFont(DynamicSpriteFont newFont)
         {
             Font = newFont;
+            UpdateSize();
         }
 
         public void SetUIScale(float scale)
         {
             Scale = scale;
-            Width.Set(200f * scale, 0f); // Adjust width based on scale
-            Height.Set(50f * scale, 0f); // Adjust height based on scale
-            Recalculate();
+            UpdateSize();
+        }
+
+        private void UpdateSize()
+        {
+            if (Font != null)
+            {
+                Vector2 textSize = Font.MeasureString(text) * Scale;
+                Width.Set(textSize.X, 0f);
+                Height.Set(textSize.Y, 0f);
+            }
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
             base.Draw(spriteBatch);
-
             Vector2 position = GetDimensions().Position();
 
-            // Ensure the font is valid before drawing
             if (Font != null)
             {
-                float outlineThickness = 2f; // Thickness of the outline
-                Color outlineColor = Color.Black; // Color of the outline
+                // Outline settings
+                float outlineThickness = 1f;
+                Color outlineColor = Color.Black;
 
-                // Draw the outline (8 directions around the text)
-                spriteBatch.DrawString(Font, text, position + new Vector2(-outlineThickness, 0), outlineColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
-                spriteBatch.DrawString(Font, text, position + new Vector2(outlineThickness, 0), outlineColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
-                spriteBatch.DrawString(Font, text, position + new Vector2(0, -outlineThickness), outlineColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
-                spriteBatch.DrawString(Font, text, position + new Vector2(0, outlineThickness), outlineColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
-                spriteBatch.DrawString(Font, text, position + new Vector2(-outlineThickness, -outlineThickness), outlineColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
-                spriteBatch.DrawString(Font, text, position + new Vector2(-outlineThickness, outlineThickness), outlineColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
-                spriteBatch.DrawString(Font, text, position + new Vector2(outlineThickness, -outlineThickness), outlineColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
-                spriteBatch.DrawString(Font, text, position + new Vector2(outlineThickness, outlineThickness), outlineColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+                // Create a brighter version of TextColor.
+                // Multiply each channel by 1.5 and clamp to 255.
+                Color brighter = new Color(
+                    (byte)Math.Min(TextColor.R * 1.5f, 255),
+                    (byte)Math.Min(TextColor.G * 1.5f, 255),
+                    (byte)Math.Min(TextColor.B * 1.5f, 255),
+                    TextColor.A);
 
-                // Draw the main text
-                spriteBatch.DrawString(Font, text, position, TextColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
-            }
-            else
-            {
-                ModContent.GetInstance<CustomMinionSlots>().Logger.Warn("Font is null, skipping drawing.");
+                // Get total width of the text.
+                float totalWidth = Font.MeasureString(text).X * Scale;
+                float accumulatedWidth = 0f;
+                Vector2 drawPosition = position;
+
+                // Draw each character with a gradient.
+                for (int i = 0; i < text.Length; i++)
+                {
+                    string letter = text[i].ToString();
+                    Vector2 letterSize = Font.MeasureString(letter) * Scale;
+                    // Calculate the gradient factor (0 at left, 1 at right).
+                    float t = totalWidth > 0 ? accumulatedWidth / totalWidth : 0;
+                    // Interpolate between brighter (left) and TextColor (right).
+                    Color letterColor = Color.Lerp(brighter, TextColor, t);
+
+                    // Draw letter outline (optional).
+                    spriteBatch.DrawString(Font, letter, drawPosition + new Vector2(-outlineThickness, 0), outlineColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+                    spriteBatch.DrawString(Font, letter, drawPosition + new Vector2(outlineThickness, 0), outlineColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+                    spriteBatch.DrawString(Font, letter, drawPosition + new Vector2(0, -outlineThickness), outlineColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+                    spriteBatch.DrawString(Font, letter, drawPosition + new Vector2(0, outlineThickness), outlineColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+
+                    // Draw the letter with the gradient color.
+                    spriteBatch.DrawString(Font, letter, drawPosition, letterColor, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+
+                    // Advance the draw position.
+                    accumulatedWidth += letterSize.X;
+                    drawPosition.X += letterSize.X;
+                }
             }
         }
+
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-
-            if (!DragEnabled) return;
+            if (!DragEnabled)
+                return;
 
             Vector2 mousePosition = new Vector2(Main.mouseX, Main.mouseY);
 
@@ -101,14 +131,26 @@ namespace CustomMinionSlots.UI
 
             if (Main.mouseLeft && isDragging)
             {
-                Left.Set(mousePosition.X - dragOffset.X, 0f);
-                Top.Set(mousePosition.Y - dragOffset.Y, 0f);
+                // Calculate the new position based on the drag.
+                float newX = mousePosition.X - dragOffset.X;
+                float newY = mousePosition.Y - dragOffset.Y;
+
+                // Get the dimensions of this UI element.
+                CalculatedStyle dims = GetDimensions();
+
+                // Clamp newX and newY so the element stays within the screen bounds.
+                newX = MathHelper.Clamp(newX, 0, Main.screenWidth - dims.Width);
+                newY = MathHelper.Clamp(newY, 0, Main.screenHeight - dims.Height);
+
+                Left.Set(newX, 0f);
+                Top.Set(newY, 0f);
                 Recalculate();
             }
 
             if (!Main.mouseLeft && isDragging)
             {
                 isDragging = false;
+                // Save the clamped position to config.
                 var config = ModContent.GetInstance<Config>();
                 config.UIPositionX = (int)Left.Pixels;
                 config.UIPositionY = (int)Top.Pixels;

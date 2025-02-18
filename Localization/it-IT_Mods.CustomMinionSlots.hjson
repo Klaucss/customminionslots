@@ -1,0 +1,91 @@
+Configs: {
+	CustomMinionSlotsConfig: {
+		FasterSummoning: {
+			Tooltip: Abilita l'evocazione più veloce riducendo il tempo tra un uso e l'altro delle armi dell'evocatore.
+			Label: Evocazione più veloce
+		}
+
+		UIPositionY: {
+			Tooltip: Imposta la posizione verticale dell'interfaccia dello Slot dei servitori. Inserisci un valore in pixel.
+			Label: Posizione Y dell'UI
+		}
+
+		UIPositionX: {
+			Tooltip: Imposta la posizione orizzontale dell'interfaccia dello Slot dei servitori. Inserisci un valore in pixel.
+			Label: Posizione X dell'UI
+		}
+
+		ShowMinionUI: {
+			Tooltip: Abilita o disabilita la visualizzazione dell'interfaccia dello Slot dei servitori.
+			Label: Mostra l'UI dello Slot dei servitori
+		}
+
+		MinionSlotLimit: {
+			Tooltip: Imposta il limite per il numero di servitori.
+			Label: Limite Slot Servitori
+		}
+
+		DisplayName: Configurazione Slot Servitori Personalizzati
+	}
+
+	Config: {
+		UIPositionX: {
+			Tooltip: Imposta la posizione orizzontale dell'interfaccia dello Slot dei servitori. Inserisci un valore in pixel.
+			Label: Posizione X dell'UI
+		}
+
+		ShowMinionUI: {
+			Tooltip: Abilita o disabilita la visualizzazione dell'interfaccia dello Slot dei servitori.
+			Label: Mostra l'UI dello Slot dei servitori
+		}
+
+		MinionSlotLimit: {
+			Tooltip: Imposta il limite per il numero di servitori.
+			Label: Limite Slot Servitori
+		}
+
+		DisplayName: Configurazione
+
+		UIPositionY: {
+			Label: Posizione Y dell'UI
+			Tooltip: Imposta la posizione verticale dell'interfaccia dello Slot dei servitori. Inserisci un valore in pixel.
+		}
+
+		FasterSummoning: {
+			Label: Evocazione più veloce
+			Tooltip: Abilita l'evocazione più veloce riducendo il tempo tra un uso e l'altro delle armi dell'evocatore.
+		}
+
+		MinionUIBaseColor: {
+			Label: Colore Interfaccia Slot Servitori Personalizzati
+			Tooltip: Imposta il colore dell'interfaccia degli Slot Servitori.
+		}
+
+		EnableBiomeBasedColor: {
+			Label: Abilita Colore Basato sul Bioma
+			Tooltip: Cambia il colore dell'interfaccia degli Slot Servitori in base al bioma attuale del giocatore.
+		}
+
+		EnableUIDragging: {
+			Label: Abilita Trascinamento dell'UI
+			Tooltip: Abilita o disabilita la funzionalità di trascinamento dell'interfaccia.
+		}
+
+		UIScale: {
+			Label: Scala UI
+			Tooltip: Imposta la scala dell'interfaccia dello Slot dei servitori.
+		}
+
+		ResetUIScaleFlag: {
+			Label: Reimposta Scala UI
+			Tooltip: Imposta questo su vero per reimpostare la scala dell'interfaccia al suo valore predefinito.
+		}
+	}
+
+	Headers: {
+		GeneralSettings: Impostazioni Generali
+		UIPosition: Posizione UI
+		AppearanceSettings: Impostazioni Aspetto
+		GameplayEnhancements: Miglioramenti al Gameplay
+	}
+}

@@ -1,0 +1,91 @@
+Configs: {
+	CustomMinionSlotsConfig: {
+		FasterSummoning: {
+			Tooltip: Włącz szybsze przywoływanie poprzez skrócenie czasu między kolejnymi użyciami broni przywoływacza.
+			Label: Szybsze Przywoływanie
+		}
+
+		UIPositionY: {
+			Tooltip: Ustaw pionową pozycję interfejsu slotu przywołańców. Wprowadź wartość w pikselach.
+			Label: Pozycja Y interfejsu
+		}
+
+		UIPositionX: {
+			Tooltip: Ustaw poziomą pozycję interfejsu slotu przywołańców. Wprowadź wartość w pikselach.
+			Label: Pozycja X interfejsu
+		}
+
+		ShowMinionUI: {
+			Tooltip: Włącz lub wyłącz wyświetlanie interfejsu slotu przywołańców.
+			Label: Pokaż interfejs slotu przywołańców
+		}
+
+		MinionSlotLimit: {
+			Tooltip: Ustaw limit liczby przywołańców.
+			Label: Limit slotu przywołańców
+		}
+
+		DisplayName: Konfiguracja niestandardowych slotów przywołańców
+	}
+
+	Config: {
+		UIPositionX: {
+			Tooltip: Ustaw poziomą pozycję interfejsu slotu przywołańców. Wprowadź wartość w pikselach.
+			Label: Pozycja X interfejsu
+		}
+
+		ShowMinionUI: {
+			Tooltip: Włącz lub wyłącz wyświetlanie interfejsu slotu przywołańców.
+			Label: Pokaż interfejs slotu przywołańców
+		}
+
+		MinionSlotLimit: {
+			Tooltip: Ustaw limit liczby przywołańców.
+			Label: Limit slotu przywołańców
+		}
+
+		DisplayName: Konfiguracja
+
+		UIPositionY: {
+			Label: Pozycja Y interfejsu
+			Tooltip: Ustaw pionową pozycję interfejsu slotu przywołańców. Wprowadź wartość w pikselach.
+		}
+
+		FasterSummoning: {
+			Label: Szybsze Przywoływanie
+			Tooltip: Włącz szybsze przywoływanie poprzez skrócenie czasu między kolejnymi użyciami broni przywoływacza.
+		}
+
+		MinionUIBaseColor: {
+			Label: Niestandardowy kolor interfejsu slotów przywołańców
+			Tooltip: Ustaw kolor interfejsu slotów przywołańców.
+		}
+
+		EnableBiomeBasedColor: {
+			Label: Włącz kolor zależny od biomu
+			Tooltip: Zmień kolor interfejsu slotów przywołańców w zależności od aktualnego biomu gracza.
+		}
+
+		EnableUIDragging: {
+			Label: Włącz przeciąganie interfejsu
+			Tooltip: Włącz lub wyłącz funkcję przeciągania interfejsu.
+		}
+
+		UIScale: {
+			Label: Skala interfejsu
+			Tooltip: Ustaw skalę interfejsu slotu przywołańców.
+		}
+
+		ResetUIScaleFlag: {
+			Label: Resetuj skalę interfejsu
+			Tooltip: Ustaw na true, aby zresetować skalę interfejsu do wartości domyślnej.
+		}
+	}
+
+	Headers: {
+		GeneralSettings: Ustawienia ogólne
+		UIPosition: Pozycja interfejsu
+		AppearanceSettings: Ustawienia wyglądu
+		GameplayEnhancements: Ulepszenia rozgrywki
+	}
+}

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CustomMinionSlots")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db17956dc6904f6f6037fd3e136093bd860dbb25")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5308ae61b4037b42501143cd5838306ab34f188")]
 [assembly: System.Reflection.AssemblyProductAttribute("CustomMinionSlots")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CustomMinionSlots")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,91 @@
+Configs: {
+	CustomMinionSlotsConfig: {
+		FasterSummoning: {
+			Tooltip: Habilite invocação mais rápida, reduzindo o tempo entre os usos das armas de invocador.
+			Label: Invocação Mais Rápida
+		}
+
+		UIPositionY: {
+			Tooltip: Defina a posição vertical da interface do Slot de Lacaios. Insira um valor em pixels.
+			Label: Posição Y da UI
+		}
+
+		UIPositionX: {
+			Tooltip: Defina a posição horizontal da interface do Slot de Lacaios. Insira um valor em pixels.
+			Label: Posição X da UI
+		}
+
+		ShowMinionUI: {
+			Tooltip: Habilite ou desabilite a exibição da interface do Slot de Lacaios.
+			Label: Mostrar Interface do Slot de Lacaios
+		}
+
+		MinionSlotLimit: {
+			Tooltip: Defina o limite para o número de lacaios.
+			Label: Limite de Slot de Lacaios
+		}
+
+		DisplayName: Configuração de Slots de Lacaios Personalizados
+	}
+
+	Config: {
+		UIPositionX: {
+			Tooltip: Defina a posição horizontal da interface do Slot de Lacaios. Insira um valor em pixels.
+			Label: Posição X da UI
+		}
+
+		ShowMinionUI: {
+			Tooltip: Habilite ou desabilite a exibição da interface do Slot de Lacaios.
+			Label: Mostrar Interface do Slot de Lacaios
+		}
+
+		MinionSlotLimit: {
+			Tooltip: Defina o limite para o número de lacaios.
+			Label: Limite de Slot de Lacaios
+		}
+
+		DisplayName: Configuração
+
+		UIPositionY: {
+			Label: Posição Y da UI
+			Tooltip: Defina a posição vertical da interface do Slot de Lacaios. Insira um valor em pixels.
+		}
+
+		FasterSummoning: {
+			Label: Invocação Mais Rápida
+			Tooltip: Habilite invocação mais rápida, reduzindo o tempo entre os usos das armas de invocador.
+		}
+
+		MinionUIBaseColor: {
+			Label: Cor da Interface de Slots de Lacaios Personalizados
+			Tooltip: Defina a cor da interface dos Slots de Lacaios.
+		}
+
+		EnableBiomeBasedColor: {
+			Label: Habilitar Cor Baseada em Bioma
+			Tooltip: Altera a cor da interface dos Slots de Lacaios com base no bioma atual do jogador.
+		}
+
+		EnableUIDragging: {
+			Label: Habilitar Arrastar da Interface
+			Tooltip: Habilite ou desabilite a funcionalidade de arrastar da interface.
+		}
+
+		UIScale: {
+			Label: Escala da UI
+			Tooltip: Defina a escala da interface do Slot de Lacaios.
+		}
+
+		ResetUIScaleFlag: {
+			Label: Redefinir Escala da UI
+			Tooltip: Defina isso como verdadeiro para redefinir a escala da interface para o valor padrão.
+		}
+	}
+
+	Headers: {
+		GeneralSettings: Configurações Gerais
+		UIPosition: Posição da UI
+		AppearanceSettings: Configurações de Aparência
+		GameplayEnhancements: Melhorias de Jogabilidade
+	}
+}

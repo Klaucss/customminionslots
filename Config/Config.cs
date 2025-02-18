@@ -12,45 +12,30 @@ namespace CustomMinionSlots
         // General Settings Group
         [Header("$Mods.CustomMinionSlots.Configs.Headers.GeneralSettings")]
 
-        [Label("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.MinionSlotLimit.Label")]
-        [Tooltip("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.MinionSlotLimit.Tooltip")]
         [Range(1, 100)]
         [DefaultValue(5)]
         public int MinionSlotLimit { get; set; }
 
-        [Label("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.ShowMinionUI.Label")]
-        [Tooltip("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.ShowMinionUI.Tooltip")]
         [DefaultValue(true)]
         public bool ShowMinionUI { get; set; }
 
-        [Label("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.EnableUIDragging.Label")]
-        [Tooltip("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.EnableUIDragging.Tooltip")]
         [DefaultValue(true)]
         public bool EnableUIDragging { get; set; }
 
         // UI Position Group
         [Header("$Mods.CustomMinionSlots.Configs.Headers.UIPosition")]
 
-        [Label("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.UIPositionX.Label")]
-        [Tooltip("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.UIPositionX.Tooltip")]
-        [Range(0, 1920)]
-        [DefaultValue(500)]
+        [DefaultValue(1268)]
         public int UIPositionX { get; set; }
 
-        [Label("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.UIPositionY.Label")]
-        [Tooltip("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.UIPositionY.Tooltip")]
-        [Range(0, 1080)]
-        [DefaultValue(50)]
+        [DefaultValue(15)]
         public int UIPositionY { get; set; }
 
-        [Label("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.UIScale.Label")]
-        [Tooltip("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.UIScale.Tooltip")]
+
         [Range(0.5f, 3.0f)]
         [DefaultValue(1.1f)]
         public float UIScale { get; set; }
 
-        [Label("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.ResetUIScaleFlag.Label")]
-        [Tooltip("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.ResetUIScaleFlag.Tooltip")]
         [DefaultValue(false)]
         public bool ResetUIScaleFlag
         {
@@ -72,21 +57,15 @@ namespace CustomMinionSlots
         // Appearance Settings Group
         [Header("$Mods.CustomMinionSlots.Configs.Headers.AppearanceSettings")]
 
-        [Label("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.MinionUIBaseColor.Label")]
-        [Tooltip("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.MinionUIBaseColor.Tooltip")]
         [DefaultValue(typeof(Color), "255, 255, 0, 255")]
         public Color MinionUIBaseColor { get; set; }
 
-        [Label("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.EnableBiomeBasedColor.Label")]
-        [Tooltip("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.EnableBiomeBasedColor.Tooltip")]
         [DefaultValue(true)]
         public bool EnableBiomeBasedColor { get; set; }
 
         // Gameplay Enhancements Group
         [Header("$Mods.CustomMinionSlots.Configs.Headers.GameplayEnhancements")]
 
-        [Label("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.FasterSummoning.Label")]
-        [Tooltip("$Mods.CustomMinionSlots.Configs.CustomMinionSlotsConfig.FasterSummoning.Tooltip")]
         [DefaultValue(false)]
         public bool FasterSummoning { get; set; }
 
